@@ -1,5 +1,5 @@
 import requests
-from config import OPENROUTER_API_KEY
+from project_config import OPENROUTER_API_KEY
 
 def summarize_article(text):
     headers = {
@@ -7,7 +7,7 @@ def summarize_article(text):
         "Content-Type": "application/json"
     }
     data = {
-        "model": "openai/gpt-3.5-turbo",
+        "model": "deepseek/deepseek-chat-v3-0324:free",
         "messages": [
             {"role": "system", "content": "请总结婴童用品相关资讯为50-80字摘要"},
             {"role": "user", "content": text}

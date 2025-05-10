@@ -1,5 +1,5 @@
 import requests
-from config import FANGTANG_SENDKEY
+from project_config import FANGTANG_SENDKEY
 
 def push_to_wechat(title, link, summary):
     markdown_msg = f"### {title}\n\n{summary}\n\n👉 [阅读全文]({link})"
